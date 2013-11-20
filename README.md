@@ -1,4 +1,4 @@
-# Cucumber::Ext
+# Cucumber::Rapid7
 
 TODO: Write a gem description
 
@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'cucumber-ext'
+    gem 'cucumber-rapid7'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install cucumber-ext
+    $ gem install cucumber-rapid7
 
 ## Usage
 
