@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = 'cucumber-rapid7'
   spec.version       = Cucumber::Rapid7::VERSION
   spec.authors       = ['Erran Carey']
-  spec.email         = ['me@errancarey.com']
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ''
+  spec.email         = ['erran_carey@rapid7.com']
+  spec.description   = %q{Cucumber extensions used at Rapid7}
+  spec.summary       = %q{Cucumber extensions for Rapid7}
+  spec.homepage      = 'https://github.com/ecarey-r7/cucumber-rapid7'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
