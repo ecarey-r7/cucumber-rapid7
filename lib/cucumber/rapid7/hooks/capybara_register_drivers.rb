@@ -1,3 +1,5 @@
+require 'capybara'
+
 # Takes each value in a comma separated list and registers it as a
 # Capybara driver
 ENV['CAPYBARA_DRIVERS'].split(/,\s*/).map(&:to_sym).each do |driver|

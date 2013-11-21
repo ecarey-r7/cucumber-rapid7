@@ -1,3 +1,5 @@
+require 'capybara'
+
 # Alias :selenium to :firefox
 Capybara.register_driver :firefox do |app|
   Capybara.drivers[:selenium]

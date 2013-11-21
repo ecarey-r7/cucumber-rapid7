@@ -1,3 +1,7 @@
+require 'cucumber/ast/outline_table/example_row'
+require 'cucumber/ast/scenario'
+require 'cucumber/term/ansicolor'
+
 module Cucumber
   module Rapid7
     module Auxiliary

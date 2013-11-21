@@ -1,6 +1,6 @@
 require 'cucumber/rapid7/auxiliary'
 
-# OPTIMIZE:
+# OPTIMIZE: Include helper methods on a global scope, so that they can be used in around hooks
 include Cucumber::Rapid7::Auxiliary
 
 Around do |scenario, block|
@@ -10,7 +10,8 @@ Around do |scenario, block|
   example_row = scenario.is_a?(Cucumber::Ast::OutlineTable::ExampleRow)
 
   if common_tags.any? && scenario_name.eql?(@last_scenario_name)
-    if example_row # TODO: Would this always an example row? If not should scenario names be unique?
+    # TODO: Would this always an example row? If not should scenario names be unique?
+    if example_row
       $stdout.print example_row_from_scenario(scenario)
     end
   elsif common_tags.any?
