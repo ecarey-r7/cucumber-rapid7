@@ -11,9 +11,9 @@ class JiraMetrics < Cucumber::Formatter::Pretty
   def initialize(runtime, path_or_io, options)
     super
 
-    @jira_client = Cucumber::Jira::Soap.new(ENV['JIRA_ENDPOINT'])
-    @jira_client.login(ENV['JIRA_USER'], ENV['JIRA_PASSWORD'], true)
-    @jira_issues = @jira_client.search :project => ENV['JIRA_PROJECT_KEY'], :themes => ENV['JIRA_THEMES'].to_s.split(/,\s*/, '')
+    jira_client = Cucumber::Jira::Soap.new(ENV['JIRA_ENDPOINT'])
+    jira_client.login(ENV['JIRA_USER'], ENV['JIRA_PASSWORD'], true)
+    @jira_issues = jira_client.search :project => ENV['JIRA_PROJECT_KEY'], :themes => ENV['JIRA_THEMES'].to_s.split(/,\s*/, '')
   end
 
   def before_feature(feature)
