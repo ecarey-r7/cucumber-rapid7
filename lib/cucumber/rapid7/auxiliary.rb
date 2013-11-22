@@ -1,4 +1,4 @@
-require 'cucumber/ast/outline_table/example_row'
+require 'cucumber/ast/outline_table'
 require 'cucumber/ast/scenario'
 require 'cucumber/term/ansicolor'
 
