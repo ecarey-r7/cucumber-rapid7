@@ -6,7 +6,7 @@ include Cucumber::Rapid7::Auxiliary
 Around do |scenario, block|
   scenario_name = find_scenario_name(scenario)
   source_tags = scenario.source_tag_names
-  common_tags = source_tags & ENV['CUCUMBER_SKIP_TAGS'].to_s.split(/,/)
+  common_tags = source_tags & ENV['CUCUMBER_SKIP_TAGS'].to_s.split(',')
   example_row = scenario.is_a?(Cucumber::Ast::OutlineTable::ExampleRow)
 
   if common_tags.any? && scenario_name.eql?(@last_scenario_name)

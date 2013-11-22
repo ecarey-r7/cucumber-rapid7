@@ -2,7 +2,7 @@ require 'capybara'
 
 # Takes each value in a comma separated list and registers it as a
 # Capybara driver
-ENV['CAPYBARA_DRIVERS'].split(/,\s*/).map(&:to_sym).each do |driver|
+ENV['CAPYBARA_DRIVERS'].split(',').map(&:to_sym).each do |driver|
   case driver
   when :poltergeist
     require 'capybara/poltergeist'
