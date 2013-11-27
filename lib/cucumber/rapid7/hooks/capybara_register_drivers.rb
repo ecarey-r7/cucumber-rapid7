@@ -1,5 +1,10 @@
 require 'capybara'
 
+# Alias :selenium to :firefox
+Capybara.register_driver :firefox do |app|
+  Capybara.drivers[:selenium]
+end
+
 # Takes each value in a comma separated list and registers it as a
 # Capybara driver
 ENV['CAPYBARA_DRIVERS'].split(',').map(&:to_sym).each do |driver|
