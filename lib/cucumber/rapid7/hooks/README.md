@@ -1,4 +1,4 @@
-# Cucumber::Rapid7
+# Cucumber::Rapid7 Hooks
 ## Capybara
 ## Capybara Register Drivers
 ## Postponed
