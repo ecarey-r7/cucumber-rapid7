@@ -17,11 +17,11 @@ Or install it yourself as:
     $ gem install cucumber-rapid7
 
 ## Usage
-### Auxiliary
-### Hooks
-#### Capybara
-##### Register drivers
-##### Rerun scenarios for multiple browsers
+Cucumber::Rapid7 includes several extensions to cucumber including the following. Click the links to view the more in depth documentation for each feature.
+### • [Auxiliary](lib/cucumber/rapid7/README.md)
+### • [Formatters](lib/cucumber/rapid7/formatter/README.md)
+### • [Hooks](lib/cucumber/rapid7/hooks/README.md)
+
 ## Contributing
 
 1. Fork it
