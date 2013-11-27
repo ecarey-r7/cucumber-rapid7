@@ -1,6 +1,6 @@
 # Cucumber::Rapid7
 
-TODO: Write a gem description
+Cucumber hooks, formatters, and more used at Rapid7 by the ControlsInsight team.
 
 ## Installation
 
@@ -17,8 +17,25 @@ Or install it yourself as:
     $ gem install cucumber-rapid7
 
 ## Usage
+### Auxiliary
+```ruby
+# features/support/hook.rb
+require 'cucumber/rapid7/auxiliary'
 
-TODO: Write usage instructions here
+# Include Auxiliary in a given scope (or globally)
+include Auxiliary
+
+Around do |scenario, block|
+  scenario_name = find_scenario_name(scenario)
+  file_colon_line = find_file_colon_line(scenario)
+  example_row = example_row_from_scenario(scenario)
+  skipping_message = skip_tag_error(scenario_name, common_tags, !!example_row)
+  # ... Handle skip logic here
+  
+  # Run the test otherwise
+  block.call
+end
+```
 
 ## Contributing
 
